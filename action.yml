@@ -1,0 +1,7 @@
+name: PR automation
+author: vilmibm
+description: PR linting and autorejection
+
+runs:
+  using: docker
+  image: Dockerfile
