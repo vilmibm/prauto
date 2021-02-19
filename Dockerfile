@@ -1,4 +1,7 @@
 FROM golang:1.15
-COPY ["go", "/go"]
-RUN go build -o /bin/app .
-ENTRYPOINT ["/bin/app"]
+WORKDIR /src
+COPY . . 
+ENV GO111MODULE=on
+
+RUN go build -o /bin/action
+ENTRYPOINT ["/bin/action"]
